@@ -19,6 +19,7 @@
 		:max="schema.max || null",
 		:options-limit="selectOptions.optionsLimit",
 		:group-values="selectOptions.groupValues",
+		:open-direction="selectOptions.openDirection",
 		:group-label="selectOptions.groupLabel",
 		:block-keys="selectOptions.blockKeys",
 		:internal-search="selectOptions.internalSearch",
