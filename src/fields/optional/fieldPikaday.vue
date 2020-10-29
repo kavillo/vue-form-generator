@@ -12,7 +12,7 @@ let inputFormat = "YYYY-MM-DD";
 export default {
 	mixins: [ abstractField ],
 	data() {
-		return { 
+		return {
 			picker: null,
 			options: null
 		};
@@ -34,7 +34,10 @@ export default {
 					this.options = defaults({}, options, {
 						field: this.$el, // bind the datepicker to a form field
 						onSelect: () => {
-							this.value = this.picker.toString();
+							let newvalue = this.picker.toString();
+							if (newvalue !== this.value) {
+								this.value = newvalue;
+							}
 						}
 						// trigger: , // use a different element to trigger opening the datepicker, see [trigger example][] (default to `field`)
 					});
